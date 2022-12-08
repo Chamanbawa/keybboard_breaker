@@ -1,0 +1,213 @@
+@import "./reset.css";
+
+/* ------------------- */
+/*                      */
+/* ------------------- */
+:root {
+
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+}
+
+body {
+    background-color: #000;
+    background-image: url(../img/image.jpg);
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin: auto;
+}
+
+
+/* ------------------Section---------------------- */
+
+.utilities {
+    width: 100%;
+    height: 50px;
+    display: flex;
+
+}
+
+.clock {
+    padding: 5px;
+    height: 100%;
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    gap: 15px;
+}
+
+.fa-clock {
+    margin-top: 7px;
+}
+
+.timer {
+    color: #fff;
+}
+
+.hits {
+    height: 100%;
+    padding: 5px;
+    width: 50%;
+    text-align: right;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* -----------------------Content=----------------------- */
+.center {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 50px);
+    color: #fff;
+}
+
+
+.input,
+.words {
+    appearance: none;
+    width: 300px;
+    padding: 5px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #000;
+    font-size: 16px;
+    inset: auto 50px 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px;
+    background-color: #fff;
+}
+
+.input {
+    margin-top: 5px;
+}
+
+.restart,
+.start {
+    visibility: hidden;
+    width: 90px;
+    padding: 5px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    inset: auto 50px 50px auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px;
+    background-color: var(--app-orange);
+}
+
+.start {
+    visibility: visible;
+}
+
+/* --------------------Statistics--------------------- */
+
+.info {
+    visibility: hidden;
+    position: fixed;
+    height: 300px;
+    width: 250px;
+    background-color: rgb(156, 106, 106);
+    color: #33ab4e;
+    border-radius: 10px;
+}
+
+.end {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+}
+
+.game {
+    color: rgb(247, 145, 12);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.over {
+    color: #364ee6;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.result {
+    display: grid;
+    place-items: center;
+    height: calc(100% - 40px);
+    padding: 10px;
+}
+
+.stats {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.words {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* ----------------------------loading circle----------------------------- */
+.loading-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    border: 3px solid rgba(255, 255, 255, .3);
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+
+}
+
+/* ---------------------Scores----------------------------- */
+
+ 
+.score-container {
+    position: absolute;
+    background-color: #fff;
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+dialog {
+    margin: auto;
+}
+dialog::backdrop {
+    backdrop-filter: blur(10px);
+}
+
+.highscore{
+    color: rgb(14, 13, 13);
+}
